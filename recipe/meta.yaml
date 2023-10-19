@@ -25,6 +25,7 @@ requirements:
   host:
     - python
     - pip
+    - pybind11
   run:
     - python
     - ase

@@ -1,0 +1,22 @@
+From 1018a2b28a472cdc9fb9ec95077cf016e89af816 Mon Sep 17 00:00:00 2001
+From: Jan Janssen <jan-janssen@users.noreply.github.com>
+Date: Thu, 19 Oct 2023 21:28:36 +0200
+Subject: [PATCH] Update CMakeLists.txt
+
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 5f9c0ae..a752ba1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -36,7 +36,7 @@ set(WIGNER_PATH lib/ace/utils/wigner-cpp)
+ set(WIGNER_INCLUDE_PATH ${WIGNER_PATH}/include/wigner)
+ include_directories(${WIGNER_INCLUDE_PATH})
+ 
+-add_subdirectory(lib/pybind11)
++find_package(pybind11)
+ if (NOT CMAKE_BUILD_TYPE)
+   set(CMAKE_BUILD_TYPE Release)
+ endif ()

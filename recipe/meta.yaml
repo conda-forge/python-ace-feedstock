@@ -26,7 +26,6 @@ requirements:
     - python
     - pip
     - pybind11
-    - libcxx  # [osx]
   run:
     - python
     - ase
@@ -34,6 +33,7 @@ requirements:
     - pandas
     - psutil
     - ruamel.yaml
+    - libcxx  # [osx]
 
 test:
   imports:

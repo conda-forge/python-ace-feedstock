@@ -26,6 +26,7 @@ requirements:
     - python
     - pip
     - pybind11
+    - libcxx  # [osx]
   run:
     - python
     - ase

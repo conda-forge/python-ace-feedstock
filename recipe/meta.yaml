@@ -9,7 +9,6 @@ source:
   url: https://github.com/ICAMS/{{ name }}/archive/{{ version }}.tar.gz
   sha256: 548c14a463943e1dcc62143ef904370e15e5928ea9ad0c9d236d607020a1f38a
   patches:
-    - setup.patch  # [osx]
     - pybind.patch
     - Feb16.patch
 

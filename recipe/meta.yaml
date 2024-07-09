@@ -11,6 +11,7 @@ source:
   patches:
     - setup.patch  # [osx]
     - pybind.patch
+    - Feb16.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv

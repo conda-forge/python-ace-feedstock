@@ -11,10 +11,11 @@ source:
   patches:
     - setup.patch  # [osx]
     - pybind.patch
+    - yaml.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 5
+  number: 6
   skip: true  # [win]
 
 requirements:

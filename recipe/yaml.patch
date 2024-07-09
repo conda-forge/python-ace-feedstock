@@ -1,0 +1,37 @@
+From a66c310a9ab16759c25553df89d90eb2aa07dfeb Mon Sep 17 00:00:00 2001
+From: Yury Lysogorskiy <yura.lysogorskii@gmail.com>
+Date: Wed, 22 Nov 2023 16:49:17 +0100
+Subject: [PATCH] fix yaml.safe_load
+
+---
+ bin/pacemaker          | 3 ++-
+ lib/ace/CMakeLists.txt | 2 +-
+ 2 files changed, 3 insertions(+), 2 deletions(-)
+
+diff --git a/bin/pacemaker b/bin/pacemaker
+index a1e0f50..da559ac 100644
+--- a/bin/pacemaker
++++ b/bin/pacemaker
+@@ -169,7 +169,8 @@ def main(args):
+     log.info("ace_evaluator   version: {}".format(get_ace_evaluator_version()))
+     log.info("Loading {}... ".format(input_yaml_filename))
+     with open(input_yaml_filename) as f:
+-        args_yaml = yaml.safe_load(f)
++        yaml_loader = yaml.YAML(typ='safe', pure=True)
++        args_yaml = yaml_loader.load(f)
+ 
+     assert isinstance(args_yaml, dict)
+     if "cutoff" in args_yaml:
+diff --git a/lib/ace/CMakeLists.txt b/lib/ace/CMakeLists.txt
+index 65b2670..653b28e 100644
+--- a/lib/ace/CMakeLists.txt
++++ b/lib/ace/CMakeLists.txt
+@@ -43,7 +43,7 @@ add_subdirectory(${CNPY_PATH})
+ #target_include_directories(test_extended PUBLIC ${WIGNER_INCLUDE_PATH})
+ ## cnpy
+ #target_include_directories(test_extended PUBLIC ${CNPY_INCLUDE_PATH})
+-#target_link_libraries(test_extended cnpy-static)
++#target_link_libraries(test_extended cnpy)
+ ##YAML
+ #target_include_directories(test_extended PUBLIC ${YAML_INCLUDE_PATH})
+ #target_link_libraries(test_extended yaml-cpp)

@@ -36,6 +36,7 @@ requirements:
     - ruamel.yaml
     - libcxx  # [osx]
     - scikit-learn
+    - tensorpotential
 
 test:
   imports:

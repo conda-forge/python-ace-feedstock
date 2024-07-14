@@ -9,7 +9,6 @@ source:
   url: https://github.com/ICAMS/python-ace/archive/75300ebba0fad65553e8ccb9c75b15ea090d0700.tar.gz
   sha256: ba05ba784e3020e45b67896cdf4e6e960a41346487349233b1318cc9f99f6f64
   patches:
-    - setup.patch  # [osx]
     - pybind.patch
     - yaml.patch
 
@@ -36,6 +35,7 @@ requirements:
     - psutil
     - ruamel.yaml
     - libcxx  # [osx]
+    - scikit-learn
 
 test:
   imports:

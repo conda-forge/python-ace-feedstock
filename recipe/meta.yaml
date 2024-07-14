@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/ICAMS/{{ name }}/archive/29ba519d76eed9f6654d6633a9911336cb13da14.tar.gz
-  sha256: b78a42e5678953596e03a5f0b2de828466add9e7b23c6267eab40f5bdd42e8f6
+  url: https://github.com/ICAMS/{{ name }}/archive/636a42a8bef554f4be6a925921096058ad96dfbd.tar.gz
+  sha256: 4814d35f3d7efa680b7682dc226b7d3a2a707d55e6cd2c4e5194a4ea27c5bd9f
   patches:
     - pybind.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:

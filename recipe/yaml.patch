@@ -1,16 +1,16 @@
 From 5e90674476c2b3e5f9d1483ba9671498fd96d1ad Mon Sep 17 00:00:00 2001
 From: Jan Janssen <jan-janssen@users.noreply.github.com>
 Date: Tue, 9 Jul 2024 16:15:35 +0200
-Subject: [PATCH] Update pacemaker.py
+Subject: [PATCH] Update pacemaker
 
 ---
- bin/pacemaker.py | 3 ++-
+ bin/pacemaker | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
-diff --git a/bin/pacemaker.py b/bin/pacemaker.py
+diff --git a/bin/pacemaker b/bin/pacemaker
 index f31d025..9e0331f 100644
---- a/bin/pacemaker.py
-+++ b/bin/pacemaker.py
+--- a/bin/pacemaker
++++ b/bin/pacemaker
 @@ -166,7 +166,8 @@ def main(args):
      log.info("ace_evaluator   version: {}".format(get_ace_evaluator_version()))
      log.info("Loading {}... ".format(input_yaml_filename))

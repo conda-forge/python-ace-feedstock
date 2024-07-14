@@ -1,21 +1,20 @@
 {% set name = "python-ace" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ICAMS/{{ name }}/archive/{{ version }}.tar.gz
-  sha256: 548c14a463943e1dcc62143ef904370e15e5928ea9ad0c9d236d607020a1f38a
+  url: https://github.com/ICAMS/python-ace/archive/75300ebba0fad65553e8ccb9c75b15ea090d0700.tar.gz
+  sha256: ba05ba784e3020e45b67896cdf4e6e960a41346487349233b1318cc9f99f6f64
   patches:
-    - setup.patch  # [osx]
     - pybind.patch
     - yaml.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 7
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -36,6 +35,8 @@ requirements:
     - psutil
     - ruamel.yaml
     - libcxx  # [osx]
+    - scikit-learn
+    - tensorpotential
 
 test:
   imports:

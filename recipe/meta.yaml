@@ -1,12 +1,12 @@
 {% set name = "python-ace" %}
-{% set version = "0.2.8" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ICAMS/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/ICAMS/python-ace/archive/29ba519d76eed9f6654d6633a9911336cb13da14.tar.gz
   sha256: 548c14a463943e1dcc62143ef904370e15e5928ea9ad0c9d236d607020a1f38a
   patches:
     - setup.patch  # [osx]
@@ -15,7 +15,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 7
+  number: 0
   skip: true  # [win]
 
 requirements:

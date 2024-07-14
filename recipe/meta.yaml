@@ -1,12 +1,12 @@
 {% set name = "python-ace" %}
-{% set version = "0.2.8" %}
+{% set version = "0.2.9" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ICAMS/{{ name }}/archive/{{ version }}.tar.gz
+  url: https://github.com/ICAMS/python-ace/archive/75300ebba0fad65553e8ccb9c75b15ea090d0700.tar.gz
   sha256: 548c14a463943e1dcc62143ef904370e15e5928ea9ad0c9d236d607020a1f38a
   patches:
     - setup.patch  # [osx]

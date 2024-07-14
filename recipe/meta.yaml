@@ -1,16 +1,15 @@
 {% set name = "python-ace" %}
-{% set version = "0.2.9" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/ICAMS/python-ace/archive/75300ebba0fad65553e8ccb9c75b15ea090d0700.tar.gz
-  sha256: ba05ba784e3020e45b67896cdf4e6e960a41346487349233b1318cc9f99f6f64
+  url: https://github.com/ICAMS/{{ name }}/archive/29ba519d76eed9f6654d6633a9911336cb13da14.tar.gz
+  sha256: b78a42e5678953596e03a5f0b2de828466add9e7b23c6267eab40f5bdd42e8f6
   patches:
     - pybind.patch
-    - yaml.patch
 
 build:
   script: {{ PYTHON }} -m pip install . -vv

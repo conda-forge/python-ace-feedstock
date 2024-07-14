@@ -9,8 +9,8 @@ Subject: [PATCH] Update pacemaker
 
 diff --git a/bin/pacemaker b/bin/pacemaker
 index f31d025..9e0331f 100644
---- a/bin/pacemaker.py
-+++ b/bin/pacemaker.py
+--- a/bin/pacemaker
++++ b/bin/pacemaker
 @@ -166,7 +166,8 @@ def main(args):
      log.info("ace_evaluator   version: {}".format(get_ace_evaluator_version()))
      log.info("Loading {}... ".format(input_yaml_filename))

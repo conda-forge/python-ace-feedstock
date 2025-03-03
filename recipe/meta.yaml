@@ -14,7 +14,7 @@ source:
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -36,7 +36,7 @@ requirements:
     - ruamel.yaml
     - libcxx  # [osx]
     - scikit-learn
-    - tensorpotential
+    - grace-tensorpotential
 
 test:
   imports:

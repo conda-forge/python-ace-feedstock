@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/ICAMS/{{ name }}/archive/d1c213a7d9c5b809a3ae83b2e5a916be26d921f0.tar.gz
-  sha256: 4814d35f3d7efa680b7682dc226b7d3a2a707d55e6cd2c4e5194a4ea27c5bd9f
+  sha256: 8ff9471ff9c659b038a924ace5cc6b50db993885568043b0650c427c79543508
   patches:
     - pybind.patch
     - grace.patch

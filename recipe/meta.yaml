@@ -26,6 +26,7 @@ requirements:
     - {{ stdlib("c") }}
   host:
     - python
+    - setuptools
     - pip
     - pybind11
   run:

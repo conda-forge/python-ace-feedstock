@@ -38,7 +38,7 @@ requirements:
     - ruamel.yaml
     - libcxx  # [osx]
     - scikit-learn
-    - grace-tensorpotential
+    - grace-tensorpotential >=0.5.3
 
 test:
   imports:

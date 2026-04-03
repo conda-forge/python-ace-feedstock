@@ -33,7 +33,7 @@ requirements:
   run:
     - python
     - ase
-    - numpy <2.4
+    - numpy <2.2
     - setuptools <81
     - pandas
     - psutil

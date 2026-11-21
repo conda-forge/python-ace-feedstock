@@ -6,14 +6,14 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/python_ace-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/python_ace-{{ version }}.tar.gz
   sha256: 7ab0fe185d34906300830fc3b2e27ddb1619851faac59c69220449711868f1e4
   patches:
     - pybind.patch
     - stdint.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
